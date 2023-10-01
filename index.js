@@ -1,5 +1,4 @@
-let  Addbutton =document.querySelector('#btn-add button');
+let  Addbutton=document.querySelector('#btn-add button');
+Addbutton.onclick
 
-Addbutton=()=>{
-    Addbutton.setAttribute('href','cadastro.html');
-}
+console.log(Addbutton);
