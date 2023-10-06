@@ -1,17 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+    <link rel="stylesheet" href="./style/style-add.css">
 </head>
 <body>
     
     <section id="container-cadastro">
-        <article id="container-form">
-            boas
-        </article>
+        <div id="btn-close">
+            <a href="index.html">×</a>
+        </div>
+        <h1>Add novo item</h1>
+        <p>Qual item você gostaria de adicionar?</p>
+        
+        <form  autocomplete="on">
+            <div id="cont-img">
+                <label for="image">Imagem 📸</label>
+                   <img src="#" alt=""> 
+                <input type="file" name="fil" id="image" accept="image/*" required>
+            </div>
+
+            <div class="cont-radio-button">
+                <label for="checke-free">
+                    <input type="radio" name="icheckbox" value="Frete Gratis" id="checke-free">
+                    Frete-free
+                </label>
+                <label for="checke-pay">
+                     <input type="radio" name="icheckbox" value="Frete Paga" id="checke-pay" checked>
+                     Frete-pay
+                </label>
+
+            </div>
+
+            <div class="cont-input">
+                <label for="inome">Nome*</label>
+                <input class="input" type="text" autocomplete="text" name="" id="inome" placeholder="Nome do produto">
+            </div>
+
+             <div class="cont-input">
+                <label for="descript">Descriçao*</label>
+                <textarea name="" class="input" id="descript" cols="30" rows="3"placeholder="Descriçao do produto"></textarea>
+            </div>
+
+             <div id="cont-preco-cat">
+
+                <div id="cont-preco" class="cont-input">
+                    <label for="price">Preço*</label>
+                    <input type="number" name="" id="price" placeholder=" preço kz">
+                </div>
+
+                <div id="cont-cat" class="cont-input">
+                    <label for="categ">Categorias*</label>
+                    <input  type="text" list="cat" id="categ" placeholder="Categória do produto">
+                    <datalist id="cat">
+                        <option>Mangas Cumpridas</option>
+                        <option>Mangas Curtas</option>
+                        <option>Pomadas</option>
+                        <option>Cremes</option>
+                        <option>Oléo</option>
+                        <option>Desodorizante</option>
+                    </datalist>
+
+                </div>
+
+            </div>
+
+             <div class="cont-radio-button">
+                <button type="reset" id="cancel">Cancelar</button>
+                <button type="submit" id="add-item">Add item</button>
+            </div>
+
+        </form>
     </section>
-    <script src="index.js"></script>
+
+    <div id="container-modal">
+       <!-- adiconado no javascript-->
+
+    </div>
+
+    <script src="js/salvestorage.js"></script>
 </body>
 </html>

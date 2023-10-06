@@ -1,0 +1,229 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --text-cor:#555b6d;
+    --btn-cor:#0f1730;
+    --form-cor-bg:#fff;
+    --bg-color:#e5eaf9;
+}
+body{
+    height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    padding-inline: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#container-cadastro
+{
+    width:100%;
+    max-width: 350px;
+    background:var(--form-cor-bg);
+    box-shadow: 2px 2px 6px #c5cfef, 2px 20px 20px #c5cfef;
+    border-radius:15px;
+    color: var(--text-cor);
+    padding:30px 40px;
+    position: relative;
+}
+#btn-close
+{
+    position: absolute;
+    top:15px;
+    right:15px;
+}
+#btn-close a{
+    color:var(--text-cor);
+    text-decoration: none;
+    font-size:25px;
+    padding:0 5px 3px;
+    transition: background 0.3s ease;
+}
+#btn-close a:hover{
+    background: rgba(0,0,0,0.2);
+    border-radius: 3px;
+}
+#container-cadastro h1,p
+{
+    color: var(--btn-cor);
+    margin-top:0;
+    margin-bottom:15px;
+}
+p{
+    font-weight:600;
+    font-size:12px;
+}
+#container-cadastro form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 15px;
+    /* border: 1px solid red; */
+}
+#cont-img
+{
+    border: 1px solid red;
+    width:80px;
+    height:80px;
+    margin-inline:auto;
+    border-radius:50%;
+    background:transparent;
+    color:var(--form-cor-bg);
+    font-size:12px;
+    font-weight:400;
+    overflow:hidden;
+    position: relative;
+    z-index:4;
+}
+#cont-img img{
+    max-width:100%;
+    z-index:1;
+}
+#cont-img label
+{
+    cursor: pointer;
+    width:100%;
+    height:100%;
+    padding:5px;
+    text-align:center;
+    background-color: rgba(0,0,0,0.5);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:absolute;
+    z-index:4;
+}
+#cont-img>input{
+    display: none;
+}
+.cont-radio-button
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
+    /* border: 1px solid red; */
+  
+}
+.cont-radio-button label
+{
+    color: var(--text-cor);
+    font-size:13px;
+    font-weight: 600;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    gap: 5px;
+    cursor: pointer;
+}
+.cont-radio-button input[type="radio"]
+{
+    appearance: none;
+    border: 1px solid var(--text-cor);
+    height:1.3rem;
+    width: 1.3rem;
+    border-radius:50%;
+    cursor: pointer;
+    background-color: var(--form-cor-bg)
+}
+.cont-radio-button input[type="radio"]:checked
+{
+    background-image: radial-gradient(var(--btn-cor) 40% ,var(--form-cor-bg) 60% );
+}
+.input{
+    width:100%;
+    padding:10px;
+    border-radius:3px;
+    border:none;
+    outline:1px solid var(--text-cor);
+    margin-top:5px;
+}
+.input:focus{
+    box-shadow: 0 0 5px var(--btn-cor);
+}
+.cont-input>label
+{
+    font-weight:600;
+    color: var(--btn-cor);
+}
+#cont-preco-cat
+{
+    /* border: 1px solid green; */
+    display:flex;
+    gap:10px
+}
+
+#cont-preco
+{
+    flex:35%;
+}
+#cont-cat
+{
+    flex:65%;
+}
+#cont-preco-cat div input
+{
+    /* border: 1px solid red; */
+    padding: 10px;
+    border-radius:3px;
+    border: none;
+    outline:1px solid var(--text-cor);
+    width:100%;
+    display:block;
+    margin-top:5px;
+}
+
+.cont-radio-button button{
+    padding:9px 30px;
+    border:0;
+    outline:0;
+    border-radius: 3px;
+    color: var(--text-cor);
+    background: transparent;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top:10px;
+}
+.cont-radio-button button:nth-child(2)
+{
+    background: var(--btn-cor);
+    color: var(--form-cor-bg);
+}
+
+
+/* modal */
+#container-modal
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index:5;
+    display:none;
+    align-items: center;
+    justify-content: center;
+}
+#modal
+{
+    width: 200px;
+    background: var(--bg-color);
+    border-radius:5px;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    padding:10px;
+    text-align: center;
+}
+#modal a{
+    background: var(--btn-cor);
+    color: var(--form-cor-bg);
+    text-decoration: none;
+    padding:5px 8px;
+    border-radius: 5px;
+}
+.active{
+    display:flex !important;
+}
